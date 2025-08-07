@@ -16,7 +16,7 @@ function grc_send_registration_email($user_id, $qr_code) {
     $mobile = get_user_meta($user_id, 'mobile', true);
 
     // Verify required fields
-    if (empty($user->user_email) {
+    if (empty($user->user_email) ) {
         error_log('No email address for user ID: ' . $user_id);
         return false;
     }
